@@ -246,12 +246,12 @@ void usercontrol(void) {
       set_Cata(0);
        
 if (Controller1.ButtonX.pressing()) {
+  Controller1.rumble(rumbleShort);
       Pneumatic.set(true);
       wait(500, msec);
     } else {
       Pneumatic.set(false);
     }
-
 
     wait(20, msec); // Sleep the task for a short amount of time to
                     // prevent wasted resources.
