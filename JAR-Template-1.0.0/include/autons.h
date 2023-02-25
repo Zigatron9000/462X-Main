@@ -7,7 +7,7 @@ extern Drive chassis;
 
 void default_constants();
 
-void poopy();
+void winpoint();
 
 void drive_test();
 void turn_test();

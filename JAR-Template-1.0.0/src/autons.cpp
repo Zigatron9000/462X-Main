@@ -10,8 +10,11 @@ void default_constants(){
   chassis.set_swing_exit_conditions(1, 300, 3000);
 }
 
-void poopy() {
-  
+void winpoint() {
+  Intake.spin(reverse);
+  Intake.setVelocity(50, percent);
+  chassis.drive_distance(4);
+  Intake.stop();
 }
 
 void drive_test(){

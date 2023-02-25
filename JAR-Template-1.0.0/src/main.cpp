@@ -140,7 +140,8 @@ void pre_auton(void) {
     Brain.Screen.clearScreen();
     switch(current_auton_selection){
       case 0:
-        Brain.Screen.printAt(50, 50, "Drive Test");
+        Brain.Screen.printAt(50, 50, "winpoint");
+        Controller1.Screen.print("winpoint");
         break;
       case 1:
         Brain.Screen.printAt(50, 50, "Drive Test");
@@ -163,6 +164,7 @@ void pre_auton(void) {
       case 7:
         Brain.Screen.printAt(50, 50, "Holonomic Odom Test");
         break;
+Intake.stop(hold);
     }
     if(Brain.Screen.pressing()){
       while(Brain.Screen.pressing()) {}
@@ -178,7 +180,7 @@ void autonomous(void) {
   auto_started = true;
   switch(current_auton_selection){  
     case 0:
-      poopy(); //This is the default auton, if you don't select from the brain.
+      winpoint(); //This is the default auton, if you don't select from the brain.
       break;
     case 1:
       drive_test();
