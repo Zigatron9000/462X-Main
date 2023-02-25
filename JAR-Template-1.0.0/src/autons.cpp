@@ -12,13 +12,16 @@ void default_constants(){
 
 void winpoint() {
   Intake.spin(forward);
-  Intake.setVelocity(40, percent);
+  Intake.setVelocity(30, percent);
   chassis.drive_distance(6);
   Intake.stop();
   chassis.drive_distance(-6);
   chassis.turn_to_angle(-130);
-  chassis.drive_distance(66);
-  chassis.turn_to_angle(-40);
+  chassis.drive_distance(68);
+  chassis.turn_to_angle(-45);
+  chassis.drive_distance(-8);
+  chassis.drive_distance(18);
+  chassis.drive_distance(-15);
 }
 
 void drive_test(){
