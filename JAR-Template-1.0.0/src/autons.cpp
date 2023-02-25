@@ -20,8 +20,12 @@ void winpoint() {
   chassis.drive_distance(68);
   chassis.turn_to_angle(-45);
   chassis.drive_distance(-8);
-  chassis.drive_distance(18);
-  chassis.drive_distance(-15);
+  // chassis.drive_distance(18);
+  // chassis.drive_distance(-15);
+  Cata.spin(forward);
+  Cata.setVelocity(-100, percent);
+  wait(1.25, sec);
+  Cata.stop();
 }
 
 void drive_test(){
