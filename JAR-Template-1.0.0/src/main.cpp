@@ -164,7 +164,7 @@ void pre_auton(void) {
       case 7:
         Brain.Screen.printAt(50, 50, "Holonomic Odom Test");
         break;
-Intake.stop(hold);
+Intake.stop(brake);
     }
     if(Brain.Screen.pressing()){
       while(Brain.Screen.pressing()) {}
