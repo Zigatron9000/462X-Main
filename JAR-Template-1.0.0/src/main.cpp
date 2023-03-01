@@ -257,12 +257,12 @@ if (Controller1.ButtonX.pressing()) {
       Pneumatic.set(false);
     }
 
-if (Controller1.ButtonX.pressing()) {
+if (Controller1.ButtonA.pressing()) {
   Controller1.rumble(rumbleShort);
       Pneumatic2.set(true);
       wait(500, msec);
     } else {
-      Pneumatic2.set(true);
+      Pneumatic2.set(false);
     }
 
     wait(20, msec); // Sleep the task for a short amount of time to
