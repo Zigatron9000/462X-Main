@@ -15,6 +15,7 @@
 // LimitSwitch          limit         A               
 // Pneumatic            digital_out   B               
 // Inertialsensor       inertial      17              
+// Pneumatic2           digital_out   C               
 // ---- END VEXCODE CONFIGURED DEVICES ----
 
 using namespace vex;
@@ -253,6 +254,14 @@ if (Controller1.ButtonX.pressing()) {
       wait(500, msec);
     } else {
       Pneumatic.set(false);
+    }
+
+if (Controller1.ButtonX.pressing()) {
+  Controller1.rumble(rumbleShort);
+      Pneumatic2.set(true);
+      wait(500, msec);
+    } else {
+      Pneumatic2.set(false);
     }
 
     wait(20, msec); // Sleep the task for a short amount of time to

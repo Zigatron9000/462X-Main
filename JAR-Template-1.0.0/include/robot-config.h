@@ -15,6 +15,7 @@ extern controller Controller1;
 extern limit LimitSwitch;
 extern digital_out Pneumatic;
 extern inertial Inertialsensor;
+extern digital_out Pneumatic2;
 
 /**
  * Used to initialize code/tasks/devices added using tools in VEXcode Pro.

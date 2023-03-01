@@ -20,6 +20,7 @@ controller Controller1 = controller(primary);
 limit LimitSwitch = limit(Brain.ThreeWirePort.A);
 digital_out Pneumatic = digital_out(Brain.ThreeWirePort.B);
 inertial Inertialsensor = inertial(PORT17);
+digital_out Pneumatic2 = digital_out(Brain.ThreeWirePort.C);
 
 // VEXcode generated functions
 // define variable for remote controller enable/disable
