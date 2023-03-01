@@ -205,6 +205,7 @@ void autonomous(void) {
       holonomic_odom_test();
       break;
  }
+Pneumatic2.set(true);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -261,7 +262,7 @@ if (Controller1.ButtonX.pressing()) {
       Pneumatic2.set(true);
       wait(500, msec);
     } else {
-      Pneumatic2.set(false);
+      Pneumatic2.set(true);
     }
 
     wait(20, msec); // Sleep the task for a short amount of time to
