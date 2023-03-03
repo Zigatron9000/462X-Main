@@ -219,6 +219,9 @@ Pneumatic2.set(true);
 /*---------------------------------------------------------------------------*/
 
 void usercontrol(void) {
+  chassis.DriveL.stop(hold);
+  chassis.DriveR.stop(hold);
+  Intake.stop(brake);
   // User control code here, inside the loop
   while (1) {
     // This is the main execution loop for the user control program.
