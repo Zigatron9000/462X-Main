@@ -205,7 +205,6 @@ void autonomous(void) {
       holonomic_odom_test();
       break;
  }
-Pneumatic2.set(true);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -219,9 +218,14 @@ Pneumatic2.set(true);
 /*---------------------------------------------------------------------------*/
 
 void usercontrol(void) {
-  chassis.DriveL.stop(hold);
+if (Controller1.ButtonDown.pressing()) {
+  chassis.DriveL.stop(hold); 
   chassis.DriveR.stop(hold);
-  Intake.stop(brake);
+ }else{
+  chassis.DriveL.stop(coast); 
+  chassis.DriveR.stop(coast);
+}
+Intake.stop(brake);
   // User control code here, inside the loop
   while (1) {
     // This is the main execution loop for the user control program.

@@ -17,7 +17,9 @@ void winpoint() {
   Intake.stop();
   chassis.drive_distance(-6);
   chassis.turn_to_angle(-130);
-  chassis.drive_distance(68);
+  chassis.drive_distance(70);
+  motor_group(Topdriveright, drivebackright, drivefrontright).setVelocity(120, rpm);
+  motor_group(Topdrivemotorleft, drivebackleft, drivefrontleft).setVelocity(120, rpm);
   chassis.turn_to_angle(-45);
   chassis.drive_distance(-8);
   // chassis.drive_distance(18);
