@@ -11,80 +11,79 @@ void default_constants(){
 }
 
 void winpoint() {
-  Intake.spin(forward);
+// Pneumatic.set(false);
+// Pneumatic2.set(true);
+  chassis.drive_with_voltage(10, 10);
+  Intake.spin(reverse);
   Intake.setVelocity(30, percent);
   chassis.drive_distance(6);
   Intake.stop();
   chassis.drive_distance(-6);
-  chassis.turn_to_angle(-130);
-  chassis.drive_distance(70);
-  motor_group(Topdriveright, drivebackright, drivefrontright).setVelocity(120, rpm);
-  motor_group(Topdrivemotorleft, drivebackleft, drivefrontleft).setVelocity(120, rpm);
-  chassis.turn_to_angle(-45);
-  chassis.drive_distance(-8);
-  // chassis.drive_distance(18);
-  // chassis.drive_distance(-15);
-  Cata.spin(forward);
-  Cata.setVelocity(-100, percent);
-  wait(1.25, sec);
-  Cata.stop();
+  // // chassis.turn_to_angle(-130);
+  // chassis.drive_distance(70);
+  // // motor_group(Topdriveright, drivebackright, drivefrontright).setVelocity(120, rpm);
+  // // motor_group(Topdrivemotorleft, drivebackleft, drivefrontleft).setVelocity(120, rpm);
+  // chassis.turn_to_angle(-45);
+  // chassis.drive_distance(-8);
+  // // chassis.drive_distance(18);
+  // // chassis.drive_distance(-15);
+  // Cata.spin(forward);
+  // Cata.setVelocity(-100, percent);
+  // wait(1.25, sec);
+  // Cata.stop();
 }
 
-void drive_test(){
-  chassis.drive_distance(6);
-  chassis.drive_distance(12);
-  chassis.drive_distance(18);
-  chassis.drive_distance(-36);
-}
+// 
 
-void turn_test(){
-  chassis.turn_to_angle(5);
-  chassis.turn_to_angle(30);
-  chassis.turn_to_angle(90);
-  chassis.turn_to_angle(225);
-  chassis.turn_to_angle(0);
-}
 
-void swing_test(){
-  chassis.left_swing_to_angle(90);
-  chassis.right_swing_to_angle(0);
-}
+// void turn_test(){
+//   chassis.turn_to_angle(5);
+//   chassis.turn_to_angle(30);
+//   chassis.turn_to_angle(90);
+//   chassis.turn_to_angle(225);
+//   chassis.turn_to_angle(0);
+// }
 
-void full_test(){
-  chassis.drive_distance(24);
-  chassis.turn_to_angle(-45);
-  chassis.drive_distance(-36);
-  chassis.right_swing_to_angle(-90);
-  chassis.drive_distance(24);
-  chassis.turn_to_angle(0);
-}
+// void swing_test(){
+//   chassis.left_swing_to_angle(90);
+//   chassis.right_swing_to_angle(0);
+// }
 
-void odom_test(){
-  chassis.set_coordinates(0, 0, 0);
-  while(1){
-    Brain.Screen.clearScreen();
-    Brain.Screen.printAt(0,50, "X: %f", chassis.get_X_position());
-    Brain.Screen.printAt(0,70, "Y: %f", chassis.get_Y_position());
-    Brain.Screen.printAt(0,90, "Heading: %f", chassis.get_absolute_heading());
-    Brain.Screen.printAt(0,110, "ForwardTracker: %f", chassis.get_ForwardTracker_position());
-    Brain.Screen.printAt(0,130, "SidewaysTracker: %f", chassis.get_SidewaysTracker_position());
-    task::sleep(20);
-  }
-}
+// void full_test(){
+//   chassis.drive_distance(24);
+//   chassis.turn_to_angle(-45);
+//   chassis.drive_distance(-36);
+//   chassis.right_swing_to_angle(-90);
+//   chassis.drive_distance(24);
+//   chassis.turn_to_angle(0);
+// }
 
-void tank_odom_test(){
-  chassis.set_coordinates(0, 0, 0);
-  chassis.drive_to_point(6, 18);
-  chassis.turn_to_point(12,0, 180);
-  chassis.drive_to_point(12, 0);
-  chassis.turn_to_angle(100);
-  chassis.drive_to_point(0, 0);
-}
+// void odom_test(){
+//   chassis.set_coordinates(0, 0, 0);
+//   while(1){
+//     Brain.Screen.clearScreen();
+//     Brain.Screen.printAt(0,50, "X: %f", chassis.get_X_position());
+//     Brain.Screen.printAt(0,70, "Y: %f", chassis.get_Y_position());
+//     Brain.Screen.printAt(0,90, "Heading: %f", chassis.get_absolute_heading());
+//     Brain.Screen.printAt(0,110, "ForwardTracker: %f", chassis.get_ForwardTracker_position());
+//     Brain.Screen.printAt(0,130, "SidewaysTracker: %f", chassis.get_SidewaysTracker_position());
+//     task::sleep(20);
+//   }
+// }
 
-void holonomic_odom_test(){
-  chassis.set_coordinates(0, 0, 0);
-  chassis.holonomic_drive_to_point(0, 18, 90);
-  chassis.holonomic_drive_to_point(18, 0, 180);
-  chassis.holonomic_drive_to_point(0, 18, 270);
-  chassis.holonomic_drive_to_point(0, 0, 0);
-}
+// void tank_odom_test(){
+//   chassis.set_coordinates(0, 0, 0);
+//   chassis.drive_to_point(6, 18);
+//   chassis.turn_to_point(12,0, 180);
+//   chassis.drive_to_point(12, 0);
+//   chassis.turn_to_angle(100);
+//   chassis.drive_to_point(0, 0);
+// }
+
+// void holonomic_odom_test(){
+//   chassis.set_coordinates(0, 0, 0);
+//   chassis.holonomic_drive_to_point(0, 18, 90);
+//   chassis.holonomic_drive_to_point(18, 0, 180);
+//   chassis.holonomic_drive_to_point(0, 18, 270);
+//   chassis.holonomic_drive_to_point(0, 0, 0);
+// }

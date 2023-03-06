@@ -144,27 +144,27 @@ void pre_auton(void) {
         Brain.Screen.printAt(50, 50, "winpoint");
         Controller1.Screen.print("winpoint");
         break;
-      case 1:
-        Brain.Screen.printAt(50, 50, "Drive Test");
-        break;
-      case 2:
-        Brain.Screen.printAt(50, 50, "Turn Test");
-        break;
-      case 3:
-        Brain.Screen.printAt(50, 50, "Swing Test");
-        break;
-      case 4:
-        Brain.Screen.printAt(50, 50, "Full Test");
-        break;
-      case 5:
-        Brain.Screen.printAt(50, 50, "Odom Test");
-        break;
-      case 6:
-        Brain.Screen.printAt(50, 50, "Tank Odom Test");
-        break;
-      case 7:
-        Brain.Screen.printAt(50, 50, "Holonomic Odom Test");
-        break;
+      // case 1:
+      //   Brain.Screen.printAt(50, 50, "Drive Test");
+      //   break;
+      // case 2:
+      //   Brain.Screen.printAt(50, 50, "Turn Test");
+      //   break;
+      // case 3:
+      //   Brain.Screen.printAt(50, 50, "Swing Test");
+      //   break;
+      // case 4:
+      //   Brain.Screen.printAt(50, 50, "Full Test");
+      //   break;
+      // case 5:
+      //   Brain.Screen.printAt(50, 50, "Odom Test");
+      //   break;
+      // case 6:
+      //   Brain.Screen.printAt(50, 50, "Tank Odom Test");
+      //   break;
+      // case 7:
+      //   Brain.Screen.printAt(50, 50, "Holonomic Odom Test");
+      //   break;
 Intake.stop(brake);
     }
     if(Brain.Screen.pressing()){
@@ -183,27 +183,27 @@ void autonomous(void) {
     case 0:
       winpoint(); //This is the default auton, if you don't select from the brain.
       break;
-    case 1:
-      drive_test();
-      break;
-    case 2:
-      turn_test();
-      break;
-    case 3:
-      swing_test();
-      break;
-    case 4:
-      full_test();
-      break;
-    case 5:
-      odom_test();
-      break;
-    case 6:
-      tank_odom_test();
-      break;
-    case 7:
-      holonomic_odom_test();
-      break;
+    // case 1:
+    //   drive_test();
+    //   break;
+    // case 2:
+    //   turn_test();
+    //   break;
+    // case 3:
+    //   swing_test();
+    //   break;
+    // case 4:
+    //   full_test();
+    //   break;
+    // case 5:
+    //   odom_test();
+    //   break;
+    // case 6:
+    //   tank_odom_test();
+    //   break;
+    // case 7:
+    //   holonomic_odom_test();
+    //   break;
  }
 }
 
